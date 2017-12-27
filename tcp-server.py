@@ -1,5 +1,10 @@
 
-import socket               
+import socket
+import redis
+
+redis_db = redis.StrictRedis(host=str(os.environ['REDIS_SERVICE_HOST']), port=str(os.environ['REDIS_SERVICE_PORT']))
+redis_db.set('TCP_HOST', '0.0.0.0')
+redis_db.set('TCP_PORT', '12345')
 
 s = socket.socket()         
 host = "0.0.0.0" 
