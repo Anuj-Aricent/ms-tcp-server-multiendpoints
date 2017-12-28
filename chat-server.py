@@ -1,7 +1,6 @@
 
 import socket     
-import select
-import redis          
+import select         
 
 s = socket.socket()         
 host = "0.0.0.0" 
